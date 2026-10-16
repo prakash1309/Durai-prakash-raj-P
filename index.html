@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Durai Prakash Raj P</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--teal:#0e6b62;--yellow:#f3b72f;--ink:#12211f;--paper:#e8eee9;--mute:#4d625e;
+--d:'Silkscreen','Courier New',monospace;--b:'Figtree',system-ui,sans-serif;--ease:cubic-bezier(.7,0,.2,1)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:400 1.05rem/1.65 var(--b);overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+.px{font-family:var(--d)}
+.btn{font:700 .95rem var(--d);background:var(--yellow);color:var(--ink);border:3px solid var(--ink);padding:.8rem 1.2rem;box-shadow:4px 4px 0 var(--ink);cursor:pointer;text-decoration:none;display:inline-block;transition:transform .12s,box-shadow .12s}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+.btn:active{transform:translate(4px,4px);box-shadow:0 0 0 var(--ink)}
+.btn.alt{background:var(--paper)}
+/* intro */
+#intro{position:fixed;inset:0;z-index:50;background:var(--teal);color:var(--paper);display:grid;place-items:center}
+#intro .wipe{position:absolute;inset:0;background:var(--yellow);transform:translateY(100%)}
+#intro.go .wipe{animation:wipe .7s var(--ease) forwards}
+#intro.out{animation:out .7s var(--ease) forwards}
+@keyframes wipe{to{transform:translateY(0)}}
+@keyframes out{to{transform:translateY(-100%)}}
+#cnt{font:700 clamp(5rem,32vw,16rem)/1 var(--d);position:relative}
+#cnt small{font-size:.3em}
+#skip{position:absolute;right:1rem;bottom:1rem;z-index:2;font:700 .8rem var(--d);background:none;color:inherit;border:2px solid currentColor;padding:.5rem .8rem;cursor:pointer}
+#intro.go #cnt{color:var(--ink)}
+#intro.go #skip{color:var(--ink)}
+/* hero */
+header.hero{min-height:100svh;padding:1.4rem 1.2rem 2rem;display:flex;flex-direction:column;justify-content:space-between;background:var(--teal);color:var(--paper);position:relative}
+.top{display:flex;justify-content:space-between;align-items:flex-start}
+.mono{width:64px;height:64px;background:var(--yellow);color:var(--ink);border:3px solid var(--paper);box-shadow:5px 5px 0 var(--ink);font:700 1.5rem/1 var(--d);display:grid;place-items:center;cursor:pointer;user-select:none;padding:0}
+.mono:active{transform:translate(3px,3px);box-shadow:2px 2px 0 var(--ink)}
+.save{font:400 .75rem/1.4 var(--d);text-align:right;opacity:.9}
+h1{font:700 clamp(2.6rem,14.5vw,9.5rem)/.95 var(--d);letter-spacing:-.02em;margin:3rem 0 1.5rem}
+h1 span{display:block}
+h1 span:nth-child(2){margin-left:.35em;color:var(--yellow)}
+.tag{font-size:clamp(1.15rem,3.4vw,1.7rem);max-width:30ch;line-height:1.35;font-weight:600}
+.now{margin:1.2rem 0 2rem;font:400 .85rem/1.5 var(--d);display:flex;gap:.6rem;align-items:center}
+.now i{width:10px;height:10px;background:var(--yellow);flex:none;animation:blink 1s steps(2) infinite}
+@keyframes blink{50%{opacity:0}}
+.cta{display:flex;gap:1rem;flex-wrap:wrap}
+header .btn.alt{background:transparent;color:var(--paper);border-color:var(--paper);box-shadow:4px 4px 0 var(--ink)}
+/* sections */
+main section{padding:5rem 1.2rem}
+.w{max-width:1000px;margin:0 auto}
+h2{font:700 clamp(2rem,8vw,3.6rem)/1 var(--d);margin-bottom:2rem}
+.about{background:var(--paper)}
+.about .w{display:grid;gap:2rem}
+.about p{max-width:60ch;margin-bottom:1rem;font-size:1.15rem}
+.about p:first-of-type::first-letter{font:700 3.4rem/.8 var(--d);float:left;margin:.2rem .5rem 0 0;color:var(--teal)}
+.skills{background:var(--ink);color:var(--paper)}
+.grp{margin-bottom:2rem}
+.grp h3{font:400 1rem var(--d);color:var(--yellow);margin-bottom:.8rem}
+.chips{display:flex;flex-wrap:wrap;gap:.7rem}
+.chip{border:2px solid var(--paper);padding:.35rem .7rem;font-weight:600;display:flex;gap:.6rem;align-items:baseline}
+.chip em{font:400 .7rem var(--d);font-style:normal}
+.chip.c{background:var(--yellow);color:var(--ink);border-color:var(--yellow)}
+.chip.l{border-style:dashed}
+.key{font-size:.9rem;color:#a9bdb8;margin-top:1rem}
+.journey .w{display:grid;gap:3rem}
+.col{border-left:6px solid var(--teal);padding-left:1.2rem}
+.col:nth-child(2){border-color:var(--yellow);margin-left:clamp(0px,6vw,80px)}
+.col:nth-child(3){border-color:var(--ink);margin-left:clamp(0px,12vw,160px)}
+.col h3{font:700 1.3rem var(--d);margin-bottom:.6rem}
+.col li{margin:0 0 .5rem 1.1rem;max-width:56ch}
+.beyond{background:var(--yellow)}
+.beyond ul{list-style:none;padding:0;display:grid;gap:1rem}
+.beyond li{border:3px solid var(--ink);background:var(--paper);padding:1rem 1.2rem;box-shadow:5px 5px 0 var(--ink);max-width:46ch}
+.beyond li:nth-child(even){margin-left:auto;background:var(--teal);color:var(--paper)}
+.contact{background:var(--teal);color:var(--paper)}
+.contact a.l{display:block;font:700 clamp(1.2rem,5vw,2.2rem)/1.4 var(--d);text-decoration:none;border-bottom:3px solid var(--yellow);padding:.7rem 0;word-break:break-all;transition:padding .2s}
+.contact a.l:hover{padding-left:1rem;color:var(--yellow)}
+footer{padding:1.5rem 1.2rem;font:400 .75rem var(--d);background:var(--ink);color:#a9bdb8}
+/* wrapped */
+#wr{position:fixed;inset:0;z-index:40;display:none;color:var(--ink);cursor:pointer;user-select:none}
+#wr.on{display:flex;flex-direction:column;justify-content:center;padding:2rem 1.4rem}
+#bars{position:absolute;top:1rem;left:1rem;right:1rem;display:flex;gap:4px}
+#bars b{flex:1;height:5px;background:rgba(18,33,31,.25);overflow:hidden}
+#bars b i{display:block;height:100%;width:0;background:var(--ink)}
+#wx{position:absolute;top:2rem;right:1rem;font:700 .8rem var(--d);background:none;border:2px solid var(--ink);padding:.4rem .7rem;cursor:pointer;color:inherit}
+#wr .big{font:700 clamp(3rem,17vw,9rem)/.95 var(--d);animation:pop .5s var(--ease)}
+#wr .sm{font-size:clamp(1.1rem,4vw,1.6rem);margin-top:1.2rem;max-width:26ch;font-weight:600;animation:pop .7s var(--ease)}
+@keyframes pop{from{transform:translateY(30px);opacity:0}}
+/* achievement */
+#ach{position:fixed;left:50%;bottom:1.2rem;transform:translate(-50%,200%);z-index:60;background:var(--ink);color:var(--paper);border:3px solid var(--yellow);padding:.8rem 1.1rem;display:flex;gap:.9rem;align-items:center;width:min(92vw,380px);transition:transform .5s var(--ease);box-shadow:5px 5px 0 var(--yellow)}
+#ach.show{transform:translate(-50%,0)}
+#ach .tr{width:36px;height:36px;flex:none}
+#ach b{font:700 .75rem var(--d);color:var(--yellow);display:block}
+#ach span{font-weight:600;line-height:1.3;display:block}
+@media(min-width:800px){header.hero{padding:2rem 4rem 3rem}main section{padding:7rem 4rem}.about .w{grid-template-columns:1fr 2fr}h2{margin-bottom:0}.mono{width:84px;height:84px;font-size:2rem}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div id="intro" aria-label="Loading">
+  <div class="wipe"></div>
+  <div id="cnt" class="px" aria-live="off">0<small>%</small></div>
+  <button id="skip">Skip</button>
+</div>
+
+<header class="hero" id="top">
+  <div class="top">
+    <button class="mono" id="mono" aria-label="Monogram DP">DP</button>
+    <div class="save">SAVE FILE<br>1st-year B.Tech IT</div>
+  </div>
+  <div>
+    <h1><span>Durai</span><span>Prakash</span><span>Raj P</span></h1>
+    <p class="tag" id="tagline"></p>
+    <p class="now"><i></i><span id="now"></span></p>
+    <div class="cta">
+      <a class="btn" href="#about">Explore</a>
+      <a class="btn alt" href="#contact">Say hi</a>
+      <button class="btn alt" id="wbtn">Play my Wrapped</button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="about" id="about"><div class="w"><h2>About</h2><div id="aboutText"></div></div></section>
+<section class="skills" id="skills"><div class="w"><h2>Skills</h2><div id="skillList"></div>
+  <p class="key">Solid chip: comfortable. Dashed chip: still learning.</p></div></section>
+<section class="journey" id="journey"><div class="w"><h2>Journey</h2><div id="jr"></div></div></section>
+<section class="beyond" id="beyond"><div class="w"><h2>Beyond code</h2><ul id="bey"></ul></div></section>
+<section class="contact" id="contact"><div class="w"><h2>Contact</h2><div id="links"></div></div></section>
+</main>
+<footer>Made by Durai Prakash Raj P. Press start again any time.</footer>
+
+<div id="wr" role="dialog" aria-label="My Wrapped"><div id="bars"></div><button id="wx">Close</button><div id="wc"></div></div>
+
+<div id="ach" role="status" aria-live="polite">
+  <svg class="tr" viewBox="0 0 8 8" shape-rendering="crispEdges"><path fill="#f3b72f" d="M1 0h6v1H1zM1 1h6v3H1zM0 1h1v2H0zM7 1h1v2H7zM2 4h4v1H2zM3 5h2v1H3zM2 6h4v1H2z"/></svg>
+  <div><b>ACHIEVEMENT UNLOCKED</b><span id="achT"></span></div>
+</div>
+
+<script>
+/* ===== EDIT THIS BLOCK: replace every [bracket] with your real words ===== */
+const DATA={
+ tagline:"[Write one line about you, in your own words]",
+ now:"Currently: [what you are learning or building right now]",
+ about:[
+  "[Paragraph 1: where you are from and what first got you into computers.]",
+  "[Paragraph 2: why you chose B.Tech IT and what you enjoy about it so far.]",
+  "[Paragraph 3: what you want to do next, in plain words.]"],
+ skills:[
+  {g:"Languages",i:[["[Language 1]","c"],["[Language 2]","l"]]},
+  {g:"Web",i:[["HTML and CSS","l"],["[Skill]","l"]]},
+  {g:"Tools",i:[["[Tool]","c"],["[Tool]","l"]]}],
+ journey:{
+  "What I've made":["[Project 1: one sentence on what it does]","[Project 2]"],
+  "What I'm learning":["[Topic 1]","[Topic 2]"],
+  "What I want to build":["[Dream project 1]","[Dream project 2]"]},
+ beyond:["[Hobby 1]","[Hobby 2]","[A fun fact about you]","[Another fun fact]"],
+ links:[["Email","[you@example.com]","mailto:you@example.com"],["LinkedIn","[linkedin.com/in/yourname]","https://linkedin.com/in/yourname"],["GitHub","[github.com/yourname]","https://github.com/yourname"]],
+ wrapped:[
+  ["1st year","B.Tech IT began. Level one."],
+  ["[number]","[projects, or lines of code, or anything you can count]"],
+  ["[Top thing]","[the language, tool or topic you used most]"],
+  ["[Hobby]","[what you do when the laptop is shut]"],
+  ["Next","[the one thing you want to build next]"]],
+ secret:"You found the secret. Nobody told you where to click."
+};
+/* ===== end of editable block ===== */
+const $=s=>document.querySelector(s),RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
+$('#tagline').textContent=DATA.tagline;$('#now').textContent=DATA.now;
+$('#aboutText').innerHTML=DATA.about.map(t=>'<p></p>').join('');
+document.querySelectorAll('#aboutText p').forEach((p,i)=>p.textContent=DATA.about[i]);
+DATA.skills.forEach(s=>{const d=document.createElement('div');d.className='grp';d.innerHTML='<h3></h3><div class="chips"></div>';
+ d.querySelector('h3').textContent=s.g;
+ s.i.forEach(([n,l])=>{const c=document.createElement('span');c.className='chip '+l;c.innerHTML='<span></span><em></em>';c.children[0].textContent=n;c.children[1].textContent=l=='c'?'Comfortable':'Learning';d.querySelector('.chips').append(c)});
+ $('#skillList').append(d)});
+for(const k in DATA.journey){const d=document.createElement('div');d.className='col';d.innerHTML='<h3></h3><ul></ul>';d.querySelector('h3').textContent=k;
+ DATA.journey[k].forEach(t=>{const li=document.createElement('li');li.textContent=t;d.querySelector('ul').append(li)});$('#jr').append(d)}
+DATA.beyond.forEach(t=>{const li=document.createElement('li');li.textContent=t;$('#bey').append(li)});
+DATA.links.forEach(([n,t,h])=>{const a=document.createElement('a');a.className='l';a.href=h;a.target='_blank';a.rel='noopener';a.textContent=n+': '+t;$('#links').append(a)});
+
+/* intro: 0 to 100, then wipe. plays once */
+const intro=$('#intro'),cnt=$('#cnt');let done=false;
+function finish(){if(done)return;done=true;intro.classList.add('out');setTimeout(()=>intro.remove(),800)}
+function run(){const t0=performance.now(),D=1700;
+ (function f(n){if(done)return;const p=Math.min((n-t0)/D,1),v=Math.round(100*(1-Math.pow(1-p,2.2)));
+  cnt.firstChild.nodeValue=v;
+  if(p<1)requestAnimationFrame(f);else{intro.classList.add('go');setTimeout(finish,600)}})(t0)}
+$('#skip').onclick=finish;
+if(RM)finish();else run();
+
+/* signature: Wrapped stories */
+const wr=$('#wr'),wc=$('#wc'),bars=$('#bars'),cols=['#f3b72f','#e8eee9','#0e6b62','#f3b72f','#e8eee9'];
+let idx=0,timer=null,fills=[];
+function show(i){idx=i;clearInterval(timer);const[s,t]=DATA.wrapped[i];
+ wr.style.background=cols[i%5];wr.style.color=cols[i%5]=='#0e6b62'?'#e8eee9':'#12211f';
+ wc.innerHTML='<div class="big"></div><div class="sm"></div>';wc.children[0].textContent=s;wc.children[1].textContent=t;
+ fills.forEach((f,j)=>{f.style.width=j<i?'100%':'0'});
+ if(RM)return;const t0=performance.now();
+ timer=setInterval(()=>{const p=(performance.now()-t0)/3800;fills[i].style.width=Math.min(p*100,100)+'%';if(p>=1)next()},40)}
+function next(){idx+1<DATA.wrapped.length?show(idx+1):(closeW(),award('Wrapped complete. Thanks for watching.'))}
+function closeW(){clearInterval(timer);wr.classList.remove('on')}
+$('#wbtn').onclick=()=>{bars.innerHTML=DATA.wrapped.map(()=>'<b><i></i></b>').join('');fills=[...bars.querySelectorAll('i')];wr.classList.add('on');show(0);$('#wx').focus()};
+wr.onclick=e=>{if(e.target.id=='wx')return closeW();const x=e.clientX/innerWidth;x<.3&&idx>0?show(idx-1):next()};
+addEventListener('keydown',e=>{if(!wr.classList.contains('on'))return;if(e.key=='Escape')closeW();if(e.key=='ArrowRight')next();if(e.key=='ArrowLeft'&&idx>0)show(idx-1)});
+
+/* achievement + easter egg: tap the monogram 5 times */
+let at;function award(t){$('#achT').textContent=t;$('#ach').classList.add('show');clearTimeout(at);at=setTimeout(()=>$('#ach').classList.remove('show'),3800)}
+let taps=0,tt;$('#mono').onclick=()=>{taps++;clearTimeout(tt);tt=setTimeout(()=>taps=0,1200);if(taps>=5){taps=0;award(DATA.secret)}};
+</script>
+</body>
+</html>
